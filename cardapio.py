@@ -19,6 +19,5 @@ def buscar_cardapio_id(item_id):
             "descricao": " Bolo de chocolate com ninho ",
             "preco": 150.99,
             "foto": ""
-
     }
 
