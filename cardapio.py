@@ -1,3 +1,16 @@
+from conexao import get_conexao
+from psycopg2.extras import RealDictCursor
+from flask import jsonify
+
+def buscar_cardapio():
+    conexao = get_conexao()
+    cursor = conexao.cursor(cursor_factory=RealDictCursor)
+    cursor.execute("SELECT * FROM cardapio")
+    itens = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return jsonify(cardapio)
+
 
 def buscar_cardapio():
     itens = [
